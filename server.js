@@ -181,8 +181,8 @@ function generateAccessToken(user){
     return jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '5s' });
 }
 
-app.listen(3002, () => {
-    console.log(`\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nServer is running on port: http://localhost:3002`);
+app.listen(3002, '0.0.0.0',() => {
+    console.log(`\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nServer is running on port: http://:3002`);
 })
 
 
