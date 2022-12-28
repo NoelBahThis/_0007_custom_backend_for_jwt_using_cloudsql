@@ -1,0 +1,79 @@
+
+//Get todo
+GET http://localhost:3002/todos
+Content-Type: application/json
+
+
+
+
+###
+
+
+//User Logout
+DELETE http://localhost:3002/logout
+Content-Type: application/json
+
+{
+    "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTm9lbCIsImlhdCI6MTY3MTQxNDQzN30.24dyqfubFt1AIM-j_jeWdxSA66hPxmyl62MyE-nebWg"
+}
+
+###
+
+//Get all user
+GET http://localhost:3002/users/retrieve
+Content-Type: application/json
+
+###
+
+
+//Add a user
+POST http://localhost:3002/users/create
+Content-Type: application/json
+
+{
+    "username": "noel",
+    "password": "qwe"
+}
+
+
+###
+
+//User Login
+POST http://localhost:3002/users/login
+Content-Type: application/json
+
+{
+    "username": "noel",
+    "password": "qweqwe"
+}
+
+###
+
+
+
+
+//Private Route
+GET http://localhost:3002/users/privateRoute
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibm9lbCIsImlhdCI6MTY3MTU5MDQ1OCwiZXhwIjoxNjcxNTkwNDg4fQ.Og0e0WkYqkVEjO45wPa0g0qvQcERwVQny0mevFdCIz8
+
+
+
+###
+
+
+
+//Refresh a token
+POST http://localhost:3002/refreshToken
+Content-Type: application/json
+
+{
+    "token": "u"
+}
+
+
+
+###
+
+
+
